@@ -1,6 +1,6 @@
 import argparse
 
-from encryption_functions import decrypt_data, generate_password, read_file, user_input, write_to_file
+from encryption_functions import decrypt_data, generate_key, read_file, user_input, write_to_file
 from tcp_functions import server_connection
 
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     port = args.port
     password = user_input()
 
-    key = generate_password(password)
+    key = generate_key(password)
 
     DECRYPTED_DATA_FILENAME = "decrypted_data.txt"
 

@@ -7,7 +7,7 @@ def user_input():
     password = input("Enter Passcode: ")
     return password
 
-def generate_password(password):
+def generate_key(password):
     key_size = 32
     iterations = 4096
     salt = "NaCL"

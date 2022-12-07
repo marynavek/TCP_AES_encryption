@@ -1,6 +1,6 @@
 import argparse
 
-from encryption_functions import encrypt_data, generate_password, read_file_not_encrypted, user_input
+from encryption_functions import encrypt_data, generate_key, read_file_not_encrypted, user_input
 from tcp_functions import client_connection
 
 # Initialize parser
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     port = args.port
     password = user_input()
 
-    key = generate_password(password)
+    key = generate_key(password)
 
     file_data = read_file_not_encrypted(file_path)
 
