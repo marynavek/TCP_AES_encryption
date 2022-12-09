@@ -1,7 +1,7 @@
 import argparse
 
-from encrypt_decrypt_functions import encrypt_data, generate_password, read_file, read_file_not_encrypted, user_input
-from tcp_functions import client_connection
+from encrypt_decrypt_original import encrypt_data, generate_password, read_file, read_file_not_encrypted, user_input
+from tcp_functions_original import client
 
 
 # Initialize parser
@@ -32,4 +32,4 @@ if __name__ == "__main__":
         file.write(encrypted_data)
 
     if local_encryption == "False":
-        client_connection(encrypted_data_file, "decrypted_data.txt")
+        client(encrypted_data_file, "decrypted_data.txt")

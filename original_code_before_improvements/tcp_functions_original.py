@@ -2,7 +2,7 @@ import socket
 from sys import getsizeof
 import os
 
-from encrypt_decrypt_functions import decrypt_data, read_file, write_to_file
+from encrypt_decrypt_original import decrypt_data, read_file, write_to_file
 
 def client(encrypted_data_file, new_file_name, port=None):
     IP = socket.gethostbyname(socket.gethostname())

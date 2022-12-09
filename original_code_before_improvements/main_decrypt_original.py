@@ -1,7 +1,7 @@
 import argparse
 
-from encrypt_decrypt_functions import decrypt_data, encrypt_data, generate_password, read_file, user_input, write_to_file
-from tcp_functions import server_connection
+from encrypt_decrypt_original import decrypt_data, encrypt_data, generate_password, read_file, user_input, write_to_file
+from tcp_functions_original import server
 
 
 # Initialize parser
@@ -30,4 +30,4 @@ if __name__ == "__main__":
         decrypted_data = decrypt_data(encrypted_data, key)
         write_to_file(decrypted_data.decode("utf-8", errors='ignore'), decrypted_data_file_name)
     else:
-        server_connection(key)
+        server(key)

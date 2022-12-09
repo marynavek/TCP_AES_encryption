@@ -6,11 +6,10 @@ from encryption_functions import decrypt_data, read_file, write_to_file
 
 
 def client_connection(encrypted_data_file, new_file_name, port=None):
-    # ip = socket.gethostbyname(socket.gethostname())
-    ip = socket.gethostbyname('localhost')
+    IP = socket.gethostbyname('localhost')
     if port is None:
         port = 4455
-    addr = (ip, port)
+    addr = (IP, port)
     size = 4096
     separator = "<SEPARATOR>"
 
@@ -38,11 +37,10 @@ def client_connection(encrypted_data_file, new_file_name, port=None):
 
 
 def server_connection(key, selected_file_name=None, port=None):
-    # ip = socket.gethostbyname(socket.gethostname())
-    ip = socket.gethostbyname('localhost')
+    IP = socket.gethostbyname('localhost')
     if port is None:
         port = 4455
-    addr = (ip, port)
+    addr = (IP, port)
     size = 4096
     separator = "<SEPARATOR>"
 
